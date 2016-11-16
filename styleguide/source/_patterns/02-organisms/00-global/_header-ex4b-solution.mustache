@@ -1,0 +1,17 @@
+<header class="global-header">
+	<div class="global-header__inner l-container">
+		<div class="global-header__logo">
+			{{> molecules-logo-link-ex4b-solution:logo-link--fastspin }}
+		</div>
+		<div class="global-header__nav">
+			<label for="global-header__nav-toggle-input" class="button button--text global-header__nav-toggle">Menu</label>
+			<input id="global-header__nav-toggle-input" class="global-header__nav-toggle-input" type="checkbox" name="navigation toggle">
+			<div class="global-header__nav-inner">
+				{{> molecules-primary-navigation }}
+			</div>
+		</div>
+	</div>
+</header>
+{{#breadcrumbs}}
+  {{> molecules-breadcrumbs }}
+{{/breadcrumbs}}

@@ -1,0 +1,49 @@
+.global-header {
+  position: relative;
+  border-bottom: $border-dotted;
+  padding-top: $small-spacing;
+  padding-bottom: $small-spacing;
+  // background: $color-blueberry;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    @include media($medium-screen-up) {
+      margin-left: auto;
+    }
+  }
+
+  &__nav-toggle {
+    padding: 5px 10px;
+    background: $color-azure;
+    color: $color-white;
+    font-size: 15px;
+
+    @include media($medium-screen-up) { display: none; }
+  }
+
+  &__nav-toggle-input { display: none; }
+
+  &__nav-inner {
+    @include media($mobile-only) {
+      position: absolute;
+      z-index: 999;
+      top: 100%;
+      left: 0;
+      right: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height $transition-base;
+      background: $color-blue-grey-1;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__nav-toggle-input:checked + &__nav-inner {
+    max-height: 100vh;
+  }
+}

@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
+
+// Generic list styling
+
+ul,
+ol,
+dl {
+  max-width: $paragraph-max-width;
+  padding-left: 17px;
+  margin-bottom: $paragraph-margin-bottom;
+  line-height: $paragraph-line-height-mobile;
+  @include media($medium-screen-up) { line-height: $paragraph-line-height; }
+}
+
+// // Unordered lists
+// ul {
+//   li {
+//   }
+// }
+//
+// // Ordered lists
+// ol {
+//   li {
+//   }
+// }
+//
+// // Definition lists
+// dl {
+//   dt {
+//
+//   }
+//   dd {
+//     margin: 0;
+//
+//   }
+// }

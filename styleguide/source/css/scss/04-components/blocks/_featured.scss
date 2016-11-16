@@ -1,0 +1,28 @@
+.featured {
+  &__heading {
+    text-align: center;
+    padding-bottom: $micro-spacing;
+    margin-bottom: $base-spacing;
+    color: $color-coral;
+    border-bottom: 3px solid $color-greenish-teal;
+  }
+
+  &__list {
+    @include list-reset();
+
+    @include media($large-screen-up) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    li {
+      @include media($large-screen-up) {
+        width: 50%;
+        margin-bottom: $base-spacing;
+
+        &:nth-child(odd) { padding-right: $small-spacing; }
+        &:nth-child(even) { padding-left: $small-spacing; }
+      }
+    }
+  }
+}

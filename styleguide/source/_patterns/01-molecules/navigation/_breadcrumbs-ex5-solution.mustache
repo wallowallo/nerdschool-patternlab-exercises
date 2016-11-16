@@ -1,0 +1,16 @@
+<nav class="breadcrumbs">
+  <ul class="breadcrumbs__list l-container">
+    {{# crumbs }}
+      <li>
+        <a href="{{{ url }}}">{{ text }}</a>
+      </li>
+    {{/ crumbs }}
+    {{^ crumbs }}
+      {{# listItems.four }}
+        <li>
+          <a href="{{{ url }}}">{{ name.first }}</a>
+        </li>
+      {{/ listItems.four }}
+    {{/ crumbs }}
+  </ul>
+</nav>

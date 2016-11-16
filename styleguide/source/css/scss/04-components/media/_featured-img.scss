@@ -1,0 +1,40 @@
+/*------------------------------------*\
+    #FEATURED-IMG
+\*------------------------------------*/
+
+/**
+ * Featured image used on info pages and news articles.
+ * There can only be 1 featured image per page.
+ */
+
+.featured-img {
+  $color-featured-img-caption-bg: $color-pale-grey-1;
+  $font-family-featured-img: $font-family-secondary;
+
+  margin-bottom: 35px;
+  @include media($medium-screen-up) { margin-bottom: 45px; }
+
+  &__img {
+    @include aspect-ratio(16, 9);
+  }
+
+  &__caption {
+    padding: 15px 10px;
+    background: $color-featured-img-caption-bg;
+    font-size: 13px;
+    font-family: $font-family-featured-img;
+
+    @include media($medium-screen-up) {
+      font-size: 15px;
+      text-align: center;
+    }
+  }
+
+  &--wide {
+    .featured-img__img {
+      @include media($medium-screen-up) {
+        @include aspect-ratio(32, 10);
+      }
+    }
+  }
+}

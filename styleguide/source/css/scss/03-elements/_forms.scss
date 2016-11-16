@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    #FORMS
+\*------------------------------------*/
+
+// Generic form styling
+
+form {}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  display: block;
+  padding-bottom: 0.5rem;
+}
+
+input,
+textarea {
+  appearance: none;
+  padding: 0.5rem 0.65rem;
+  //border: $border-darker;
+  transition: $transition-base;
+}
+
+button {
+  appearance: none;
+  background: transparent;
+  border: none;
+}

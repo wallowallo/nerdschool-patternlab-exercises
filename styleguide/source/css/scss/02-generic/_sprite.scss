@@ -1,0 +1,11 @@
+%svg-common {
+	background: url("../images/sprite.svg") no-repeat;
+}
+
+.svg-doughnut {
+	@extend %svg-common;
+	background-position: 0 0;
+	width: 65px;
+	height: 65px;
+}
+

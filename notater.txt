@@ -1,0 +1,38 @@
+- Mekke github repo med PL installert og CSS-fil klar
+
+https://github.com/pattern-lab/edition-node-gulp/wiki/Updating-to-Gulp-4
+
+
+SLIDESHOW
+----------------------
+- Problemet:
+	Utfordringer rundt frontend-prototyping
+	Hvordan pleide man å gjøre det?
+		- Statiske sider
+		- Rett i template/view (altså ingen styleguide/PL/prototype)
+		- Fikk ingenting "gratis"
+- Løsningen:
+	Stilguide
+		- Hva er en stilguide?
+		- PL er et rammeverk som lar deg bygge en stilguide
+			- Atomic design
+				- Eksempel: Meny
+		- Fordeler vs. gammel løsning:
+			- Teknologiuavhengig
+			- Byggesystem for frontend
+			- Gjenbrukbar logikk
+			- Komponentbasert utvikling
+			- Enkel bruk av dummydata
+			- Innebygget funksjonalitet for dokumentasjon
+- Arbeidsflyt
+	Klarere ansvarsfordeling, frontend-backend
+	Frontend fristilt (til en viss grad) fra backend-rammeverk
+	Kan begynne på frontend-utvikling uten å være avhengig av backend - kan kjøres før, parallelt, eller etter
+	Forenkler kommunikasjon mellom fagfeltene i teamet: Design/UX->Frontend->Backend->Kunde
+	Tilgang til hifi-prototyper for kunden
+	Fasit for hvordan nettsiden skal se ut
+
+- Teknisk gjennomgang
+	Node, npm, gulp, mustache, json
+	Filstruktur (source, public, css, js, patterns, data)
+

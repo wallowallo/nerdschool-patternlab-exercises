@@ -1,0 +1,74 @@
+/*------------------------------------*\
+    #LINK
+\*------------------------------------*/
+
+/**
+ * Styling for custom link elements
+ */
+
+.link {
+  $color-link-arrow: $color-baby-blue;
+  // $color-link-arrow-hover: $color-cerulean;
+  $color-link-arrow-simple: $color-cerulean;
+
+  display: inline-flex;
+  position: relative;
+  transition: all $transition-base;
+  align-items: center;
+
+  &--full-width { display: flex; }
+
+  &--arrow {
+    color: inherit;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    margin-right: 12px; // Width of arrow icon
+
+    // &:hover { color: $color-link-arrow-hover; }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: $color-link-arrow;
+    }
+
+    @include pseudo-icon($extend:'.svg-icn-chevron', $position:'after');
+
+    &::after {
+      position: absolute;
+      right: -11px;
+      bottom: 0;
+    }
+  }
+
+  &--arrow-reversed {
+    @extend .link--arrow;
+
+    padding-right: 0;
+    padding-left: 8px;
+    margin-right: 0;
+    margin-left: 12px; // Width of arrow icon
+
+    &::after {
+      transform: rotate(180deg);
+      right: auto;
+      left: -11px;
+    }
+  }
+
+  &--arrow-simple {
+    color: $color-link-arrow-simple;
+    justify-content: space-between;
+
+    @include pseudo-icon($extend:'.svg-icn-chevron-medium-blue', $position:'after');
+
+    &::after {
+      transform: scale(.7);
+      margin-left: 5px;
+    }
+  }
+}

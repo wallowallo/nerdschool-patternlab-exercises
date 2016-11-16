@@ -1,0 +1,36 @@
+.primary-nav {
+  @include list-reset();
+  //font-family: $font-family-secondary;
+
+  @include media($medium-screen-up) {
+    display: flex;
+  }
+
+  li {
+    @include media($mobile-only) {
+      border-bottom: $border-darker;
+      &:last-child { border: none; }
+    }
+  }
+
+  li a {
+    display: block;
+    padding: 10px 15px;
+    color: $color-light-royal-blue;
+    transition: $transition-base;
+
+    @include media($medium-screen-up) {
+      border: 1px solid transparent;
+      border-radius: $border-radius-base;
+    }
+
+    &:hover {
+      background: $color-blue-grey-2;
+      color: $color-coral;
+
+      @include media($medium-screen-up) {
+        border-color: $color-baby-blue;
+      }
+    }
+  }
+}

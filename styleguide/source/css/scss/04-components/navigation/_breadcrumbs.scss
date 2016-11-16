@@ -1,0 +1,44 @@
+.breadcrumbs {
+  $color-breadcrumbs: $color-black;
+  $color-breadcrumbs-bg: $color-blue-grey-1;
+  $color-breadcrumbs-arrow: $color-coral;
+  $color-breadcrumbs-disabled: $color-warm-grey;
+
+  font-size: 13px;
+  text-transform: uppercase;
+  font-family: $font-family-secondary;
+  background: $color-breadcrumbs-bg;
+  border-bottom: $border-accent;
+
+  @include media($mobile-only) {
+    display: none;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: $micro-spacing;
+    padding-bottom: $micro-spacing;
+  }
+
+
+  li {
+    &::after {
+      content: "\00BB";
+      color: $color-breadcrumbs-arrow;
+      margin: 0 10px;
+    }
+
+    &:last-child {
+      pointer-events: none;
+      cursor: default;
+
+      &::after { display: none }
+      a { color: $color-breadcrumbs-disabled; }
+    }
+  }
+
+  a { color: $color-breadcrumbs; }
+}

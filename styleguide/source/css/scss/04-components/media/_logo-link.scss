@@ -1,0 +1,45 @@
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  @include pseudo-icon('.svg-doughnut', $margin: 0 10px 0 0);
+
+  &::before {
+    animation: spin 15s linear infinite;
+    @include media($mobile-only) {
+      background-size: 50px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &--fastspin {
+    &::before {
+      animation: spin 1s linear infinite;
+    }
+  }
+
+  &__text {
+    line-height: 1;
+  }
+
+  &__heading {
+    font-family: $font-family-secondary;
+    font-size: $font-size-h2-mobile;
+    color: $color-coral;
+
+    @include media($medium-screen-up) { font-size: $font-size-h2; }
+  }
+
+  &__subheading {
+    font-size: 14px;
+    color: $color-light-royal-blue;
+
+    @include media($medium-screen-up) { font-size: $font-size-base; }
+  }
+}
+
+// .logo-link__heading {
+//   color: orange;
+// }

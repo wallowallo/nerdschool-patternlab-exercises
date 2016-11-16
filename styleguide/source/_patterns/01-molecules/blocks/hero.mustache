@@ -1,0 +1,16 @@
+<div class="hero">
+  <div class="hero__image-container" style="background-image: url('{{img.landscape-16x9.src}}')"></div>
+  <div class="hero__content-container">
+    <div class="hero__content">
+      <div class="hero__text">
+        <h2 class="hero__heading">{{ headline.short }}</h2>
+        <p>
+          {{ excerpt.short }}
+        </p>
+      </div>
+      <div class="hero__button">
+        {{> atoms-text-button-primary(buttonText:"Important button")}}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<ul class="primary-nav">
+ 	{{# navItems }}
+ 	<li>
+ 		<a href="{{{ url }}}">{{ text }}</a>
+ 	</li>
+ 	{{/ navItems }}
+ 	{{^ navItems }}
+		{{# listItems.four }}
+		<li>
+			<a href="{{{ url }}}">{{ name.first }}</a>
+		</li>
+		{{/ listItems.four }}
+ 	{{/ navItems }}
+</ul>

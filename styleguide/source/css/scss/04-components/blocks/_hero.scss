@@ -1,0 +1,106 @@
+/*------------------------------------*\
+    #HERO
+\*------------------------------------*/
+
+/**
+ * Callout block with image text and CTA-button
+ * Has a slanted decoration above text block
+ */
+
+.hero {
+  $color-hero-bg: $color-azure;
+  $color-hero-text: $color-white;
+  $hero-content-top: 278px;
+  $hero-height: 400px;
+
+  position: relative;
+  min-height: $hero-height;
+  margin-bottom: $large-spacing;
+  background-position: top;
+  background-size: cover;
+  color: $color-hero-text;
+
+  &__image-container {
+    background-position: top;
+    background-size: cover;
+    display: block;
+    height: 200px;
+    // position: absolute;
+    // top: 0;
+    width: 100%;
+
+    @include media($medium-screen-up) { height: 350px; }
+  }
+
+  &__content-container {
+    position: relative;
+    width: 100%;
+    min-height: $hero-height - $hero-content-top;
+    overflow: visible;
+    padding: 30px $padded-box-pad-mobile;
+    background: $color-hero-bg;
+
+    @include media($medium-screen-up) {
+      padding: 45px 40px;
+    }
+  }
+
+  &__content {
+    max-width: $max-width-inner;
+    margin: 0 auto;
+
+    @include media($large-screen-up) {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+  }
+
+  &__text,
+  &__button {
+    @include media($large-screen-up) {
+      display: inline-block;
+    }
+  }
+
+  &__text {
+    @include font-smoothing();
+    max-width: 690px;
+    font-family: $font-family-secondary;
+    font-size: 19px;
+    line-height: 1.3;
+
+    @include media($medium-screen-up) {
+      font-size: 21px;
+    }
+
+    & > *:last-child { margin-bottom: 0; }
+  }
+
+  &__heading {
+    font-weight: $font-weight-medium;
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 2.2;
+    margin-bottom: 2px;
+
+    @include media($medium-screen-up) {
+      font-size: 15px;
+      line-height: 1.9;
+    }
+  }
+
+  &__button {
+    margin-top: 35px;
+
+    @include media($mobile-only) {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    @include media($large-screen-up) {
+      max-width: 225px;
+      margin: 0;
+    }
+  }
+}
